@@ -1,0 +1,31 @@
+@use "../../style/variables" as *;
+
+.app {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0px;
+  }
+  &__logo {
+    display: block;
+    font-weight: 700;
+    font-size: 24px;
+    color: $dark;
+    span {
+      color: $main-color;
+    }
+  }
+  &__links {
+    color: $dark;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  &__link {
+    display: inline-block;
+    color: $dark;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+}

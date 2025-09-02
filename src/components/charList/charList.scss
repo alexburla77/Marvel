@@ -1,0 +1,36 @@
+@use "../../style/variables.scss" as *;
+
+.chars {
+  &__items {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    column-gap: 25px;
+    row-gap: 30px;
+  }
+  &__item {
+    width: 200px;
+    height: 318px;
+  }
+  &__item-img {
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  &__item-bottom {
+    background-color: $dark;
+    padding: 15px;
+    height: 118px;
+  }
+  &__item-name {
+    font-weight: 700;
+    font-size: 22px;
+    color: #fff;
+  }
+
+  &__button {
+    
+  }
+}

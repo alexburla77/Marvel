@@ -1,0 +1,72 @@
+@use "../../style/variables.scss" as *;
+
+.char-list {
+  display: flex;
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  &__character {
+    padding: 35px 35px 35px 40px;
+    width: 50%;
+  }
+  &__random {
+    width: 50%;
+    padding: 35px 35px 35px 40px;
+    background-color: $dark;
+    color: #fff;
+  }
+}
+
+.char-list {
+  &__random {
+    position: relative;
+    z-index: 5;
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    &_2 {
+      margin-top: 41px;
+    }
+  }
+  &__button {
+    margin-top: 17px;
+  }
+  &__img {
+    position: absolute;
+    z-index: -1;
+    bottom: 14px;
+    right: -30px;
+  }
+}
+
+.character {
+  display: flex;
+  column-gap: 30px;
+  &__info-name {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29px;
+    color: $dark;
+    margin-top: 8px;
+  }
+  &__info-text {
+    font-weight: 400;
+    font-size: 14px;
+    color: $dark;
+    margin-top: 10px;
+  }
+  &__info-buttons {
+    margin-top: 13px;
+    column-gap: 30px;
+    display: flex;
+  }
+  &__char-img {
+    display: block;
+    height: 180px;
+    width: 180px;
+    img {
+      object-fit: cover;
+    }
+  }
+}

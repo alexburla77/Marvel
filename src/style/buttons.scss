@@ -1,0 +1,33 @@
+@use "./variables.scss" as *;
+
+.button {
+  color: #fff;
+  background-color: $main-color;
+  min-width: 101px;
+  height: 38px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  padding: 11px 18px;
+  display: inline-block;
+  cursor: pointer;
+  &:disabled {
+    filter: grayscale(0.5);
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      color: #fff;
+    }
+  }
+  &__big {
+    display: block;
+    margin: 45px auto 0 auto;
+    width: 170px;
+  }
+  &__little {
+    &-gray {
+      background-color: $grey;
+    }
+  }
+}

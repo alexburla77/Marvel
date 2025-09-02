@@ -1,34 +1,44 @@
-import { useState } from 'react'
-import reactLogo from '../../assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.scss'
+import AppHeader from '../appHeader/AppHeader';
+import CharInfo from '../charInfo/CharInfo';
+import CharList from '../charList/CharList';
+import RandomChar from '../randomChar/RandomChar';
+import Skeleton from '../skeleton/Skeleton';
+import CharForm from '../charForm/charForm';
+import ComicsPage from '../comicsPage/ComicsPage';
+import SingleComic from '../singleComic/SingleComic';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import superhero from '../../resources/bg-asset.png';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className='app'>
+        <AppHeader />
+
+        <Routes>
+        <Route exact path="/" element={
+            <main>
+            <RandomChar />
+            <div className="char__content">
+              <CharList />
+              <div>
+                <CharInfo />
+                {/* <Skeleton/> */}
+                <CharForm/>
+              </div>
+            </div>
+            <img src={superhero} alt='superhero' className='superhero' />
+          </main>
+        } />
+        <Route path="/comics" element={<ComicsPage />}/>
+        {/* <SingleComic /> */}
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+    </Router>
   )
 }
 

@@ -1,0 +1,63 @@
+@use "../../style/variables.scss" as *;
+
+.char-info {
+  width: 425px;
+  min-height: 763px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  padding: 25px 25px 24px 25px;
+  &__top {
+    display: flex;
+    column-gap: 25px;
+  }
+  &__aside {
+    display: flex;
+    flex-direction: column;
+  }
+  &__img {
+    img {
+      width: 150px;
+      height: 150px;
+      display: block;
+    }
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 22px;
+    color: $dark;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+  }
+  &__button {
+    margin-top: 10px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    color: $dark;
+    margin-top: 15px;
+  }
+  &__comics {
+    font-weight: 700;
+    font-size: 18px;
+    color: $dark;
+    margin-top: 10px;
+  }
+  &__list {
+    margin-top: 10px;
+    
+  }
+  &__list-item {
+    width: 100%;
+    min-height: 25px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    padding: 4px 10px 4px 10px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

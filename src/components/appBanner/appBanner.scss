@@ -1,0 +1,20 @@
+@use "../../style/variables.scss" as *;
+
+.app-banner {
+  background-color: $dark;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px 0 45px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 83px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    line-height: 32px;
+  }
+}

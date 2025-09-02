@@ -1,0 +1,55 @@
+@use "../../style/variables.scss" as *;
+
+.single-comic {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    column-gap: 50px;
+  }
+  &__img {
+    flex: 0 0 293px;
+    height: 450px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    color: $dark;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    color: $dark;
+    margin-top: 25px;
+  }
+  &__pages {
+    font-weight: 400;
+    font-size: 18px;
+    color: $dark;
+    margin-top: 25px;
+  }
+  &__language {
+    font-weight: 400;
+    font-size: 18px;
+    color: $dark;
+    margin-top: 25px;
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 24px;
+    color: $main-color;
+    margin-top: 25px;
+  }
+  &__back {
+    font-weight: 700;
+    font-size: 18px;
+    color: $dark;
+    white-space: nowrap;
+    margin-left: 77px;
+  }
+}
